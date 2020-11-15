@@ -1,0 +1,10 @@
+node{
+  stage('SCM Checkout'){
+        git 'https://gihub.com/immuali786/my-app'
+  }
+  stage('compile-pacakage'){
+    def mvnhome = tool name: 'mymaven', type: 'maven'
+       sh "${mvnhome}/bin/mvn package"
+  }
+}  
+    
