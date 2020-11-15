@@ -1,6 +1,6 @@
 node{
   stage('SCM Checkout'){
-        git 'https://gihub.com/immuali786/my-app'
+        git 'https://github.com/immuali786/proj.git'
   }
   stage('compile-pacakage'){
     def mvnhome = tool name: 'mymaven', type: 'maven'
